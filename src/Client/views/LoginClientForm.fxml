@@ -16,7 +16,7 @@
             <Font name="Serif Bold" size="34.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="7.0" layoutY="252.0" opacity="0.54" prefHeight="54.0" prefWidth="320.0" text=" Please insert your name to continue">
+      <Label alignment="CENTER" layoutX="7.0" layoutY="256.0" opacity="0.54" prefHeight="54.0" prefWidth="320.0" text=" Please insert your name to continue">
          <font>
             <Font name="Ubuntu" size="15.0" />
          </font>

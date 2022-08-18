@@ -1,17 +1,15 @@
 package Client.controller;
 
 import com.jfoenix.controls.JFXButton;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
@@ -32,12 +30,12 @@ public class LoginClientFormController {
 
     public void loginOnAction(KeyEvent keyEvent) throws IOException {
         if (keyEvent.getCode() == KeyCode.ENTER){
-            MouseEvent mouseevent = null;
+            ActionEvent mouseevent = null;
             loginToChatRoomOnAction(mouseevent);
         }
     }
 
-    public void loginToChatRoomOnAction(MouseEvent mouseEvent) throws IOException {
+    public void loginToChatRoomOnAction(ActionEvent actionEvent) throws IOException {
 
         username = txtUsername.getText();
         loadChat();
@@ -48,11 +46,11 @@ public class LoginClientFormController {
         Stage exitstage = (Stage) btnLogin.getScene().getWindow();
         exitstage.close();
         URL resource = this.getClass().getResource("/Client/views/ClientForm.fxml");
+
         Parent load = FXMLLoader.load(resource);
         Scene scene = new Scene(load);
         Stage stage = new Stage();
-        stage.initStyle(StageStyle.UNDECORATED);
-        stage.getIcons().add(new Image("assets/livechatLogo.png"));
+
         stage.setScene(scene);
         enableMove(scene,stage);
         stage.show();
