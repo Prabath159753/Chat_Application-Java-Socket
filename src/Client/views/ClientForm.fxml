@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="675.0" prefWidth="512.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.controller.ClientFormController">
+   <children>
+      <AnchorPane prefHeight="57.0" prefWidth="512.0" style="-fx-background-color: #34495e;">
+         <children>
+            <ImageView fitHeight="39.0" fitWidth="36.0" layoutX="43.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/icons8-chat-100.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btnBackToLogin" fitHeight="30.0" fitWidth="15.0" layoutX="13.0" layoutY="18.0" onMouseClicked="#backToLoginOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/back.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label fx:id="lblUsername" layoutX="92.0" layoutY="10.0" prefHeight="37.0" prefWidth="146.0" text="Poornima" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="23.0" fitWidth="22.0" layoutX="416.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/video.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="33.0" layoutX="463.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/call.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="85.0" layoutY="616.0" prefHeight="48.0" prefWidth="376.0" style="-fx-background-color: #34495e; -fx-background-radius: 30;">
+         <children>
+            <TextField fx:id="txtClientMessage" layoutX="2.0" onKeyPressed="#sendMessageByKeyOnAction" prefHeight="47.0" prefWidth="373.0" promptText="Type a messege" style="-fx-background-radius: 30;">
+               <font>
+                  <Font name="Ubuntu" size="16.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="btnSend" fitHeight="37.0" fitWidth="45.0" layoutX="466.0" layoutY="620.0" onMouseClicked="#sendMessageOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/send.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="btnImage" fitHeight="25.0" fitWidth="25.0" layoutX="50.0" layoutY="628.0" onMouseClicked="#chooseImageOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/attach.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="36.0" layoutX="16.0" layoutY="629.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/imoji3.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ScrollPane layoutX="3.0" layoutY="61.0" prefHeight="545.0" prefWidth="505.0" style="-fx-border-color: black; -fx-background-color: white;">
+         <content>
+            <HBox fx:id="hboxmessage" prefHeight="39.0" prefWidth="499.0">
+               <children>
+                  <VBox fx:id="vboxmessage" prefHeight="39.0" prefWidth="489.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></VBox>
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </HBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
