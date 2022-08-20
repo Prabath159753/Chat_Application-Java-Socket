@@ -77,7 +77,7 @@ public class ClientFormController extends Thread {
             while (true) {
                 String msg = bufferedReader.readLine();
                 System.out.println("Message : " + msg);
-                String[] tokens = msg.split(":");
+                String[] tokens = msg.split(" ");
                 String cmd = tokens[0];
                 System.out.println("cmd : " + cmd);
                 StringBuilder fulmsg = new StringBuilder();
@@ -86,7 +86,7 @@ public class ClientFormController extends Thread {
                 }
                 System.out.println("fulmsg : " + fulmsg);
                 System.out.println();
-                if (cmd.equalsIgnoreCase(LoginClientFormController.username + " ")) {
+                if (cmd.equalsIgnoreCase(LoginClientFormController.username + ":")) {
                     continue;
                 } else if (fulmsg.toString().equalsIgnoreCase("bye")) {
                     break;
@@ -95,23 +95,23 @@ public class ClientFormController extends Thread {
                     @Override
                     public void run() {
                         HBox hBox = new HBox();
-                        /*if (!fulmsg.toString().endsWith(".png") || !fulmsg.toString().endsWith(".jpg") || !fulmsg.toString().endsWith(".jpeg") || !fulmsg.toString().endsWith(".gif")) {
-                            boolean bool = fulmsg.toString().endsWith(".png");
-                            System.out.println(bool);
+
+                        if (fulmsg.toString().startsWith("assets/emojis/") ) {
+                            System.out.println("Emoji path "+fulmsg);
                             hBox.setAlignment(Pos.CENTER_LEFT);
                             hBox.setPadding(new Insets(5, 10, 5, 5));
-                            Text text = new Text(msg);
-                            TextFlow textFlow = new TextFlow(text);
-                            textFlow.setStyle("-fx-color:rgb(239,242,255);"
-                                    + "-fx-background-color: rgb(182,182,182);" +
-                                    "-fx-background-radius: 10px");
-                            textFlow.setPadding(new Insets(5, 0, 5, 5));
-                            text.setFill(Color.color(0, 0, 0));
-                            hBox.getChildren().add(textFlow);
-                            vboxmessage.getChildren().add(hBox);
-                        }*/
-
-                        if (fulmsg.toString().endsWith(".png") || fulmsg.toString().endsWith(".jpg") || fulmsg.toString().endsWith(".jpeg") || fulmsg.toString().endsWith(".gif")) {
+                            Text text = new Text(cmd + " ");
+                            ImageView imageView = new ImageView();
+                            Image image = new Image(String.valueOf(fulmsg));
+                            imageView.setImage(image);
+                            imageView.setFitWidth(50);
+                            imageView.setFitHeight(50);
+                            TextFlow textFlow = new TextFlow(text, imageView);
+                            VBox vBox = new VBox(textFlow);
+                            vBox.setAlignment(Pos.CENTER_LEFT);
+                            vBox.setPadding(new Insets(5, 10, 5, 5));
+                            vboxmessage.getChildren().add(vBox);
+                        } else if (fulmsg.toString().endsWith(".png") || fulmsg.toString().endsWith(".jpg") || fulmsg.toString().endsWith(".jpeg") || fulmsg.toString().endsWith(".gif")) {
                             boolean bool = fulmsg.toString().endsWith(".png");
                             System.out.println(bool);
                             hBox.setAlignment(Pos.TOP_LEFT);
@@ -146,7 +146,7 @@ public class ClientFormController extends Thread {
                             TextFlow textFlow = new TextFlow(text);
                             textFlow.setStyle("-fx-color:rgb(239,242,255);"
                                     + "-fx-background-color: rgb(182,182,182);" +
-                                    "-fx-background-radius: 10px; -fx-font-size: 15px");
+                                    "-fx-background-radius: 10px;-fx-font-size: 15px");
                             textFlow.setPadding(new Insets(5, 0, 5, 5));
                             text.setFill(Color.color(0, 0, 0));
                             hBox.getChildren().add(textFlow);
@@ -206,7 +206,7 @@ public class ClientFormController extends Thread {
 
     public void send() {
         String msg = txtClientMessage.getText();
-        printWriter.println(LoginClientFormController.username + " :  " + msg + "  ");
+        printWriter.println(LoginClientFormController.username + ":  " + msg + "  ");
 //        txtClientPane.setNodeOrientation(NodeOrientation.LEFT_TO_RIGHT);
 
         HBox hBox = new HBox();

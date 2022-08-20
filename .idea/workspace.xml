@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15082199-126b-4234-b6a7-738f58247020" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Client/controller/ClientFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Client/views/ClientForm.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/back.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/call.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/camera.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/emoji.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons8-chat-100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons8-user-male-64.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/send.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/setting.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/video.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/controller/LoginClientFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/controller/LoginClientFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/controller/ClientFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/controller/ClientFormController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,21 +32,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/node/assignment/assignment 2/react-express-pos",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/node/assignment/assignment 2/react-express-pos&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.ClientInitializer1">
+}</component>
+  <component name="RunManager" selected="Application.ClientInitializer2">
     <configuration name="ClientInitializer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Client.ClientInitializer" />
       <module name="Multi-Chat_Application" />
@@ -72,6 +61,13 @@
       </method>
     </configuration>
     <configuration name="ClientInitializer1" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Client.ClientInitializer" />
+      <module name="Multi-Chat_Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientInitializer2" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Client.ClientInitializer" />
       <module name="Multi-Chat_Application" />
       <method v="2">
@@ -93,6 +89,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.ClientInitializer1" />
+      <item itemvalue="Application.ClientInitializer2" />
       <item itemvalue="Application.ClientInitializer" />
       <item itemvalue="Application.ServerInitializer" />
     </list>
@@ -111,7 +108,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1660825077813</updated>
-      <workItem from="1660825082971" duration="14164000" />
+      <workItem from="1660825082971" duration="14944000" />
+      <workItem from="1660961259606" duration="1856000" />
     </task>
     <servers />
   </component>
@@ -120,21 +118,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Server/ServerInitializer.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Client/controller/ClientFormController.java</url>
-          <line>88</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
