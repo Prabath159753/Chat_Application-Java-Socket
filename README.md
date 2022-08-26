@@ -8,4 +8,4 @@ Play Tech Pvt Ltd. is a company that supplies various types of gaming equipment.
 
 ### User Interface 📱
 
-![Screenshot (2)
+![Screenshot (2)]()
